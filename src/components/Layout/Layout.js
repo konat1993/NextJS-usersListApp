@@ -3,12 +3,7 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import { Box } from '@mui/material'
 
-const sx = {
-    layoutBox: {
-        maxWidth: "960px",
-        margin: "0 auto"
-    }
-}
+import { sx } from "./LayoutStyles"
 
 export const Layout = ({ children }) => {
     return (

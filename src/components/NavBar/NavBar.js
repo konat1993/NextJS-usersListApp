@@ -3,26 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { AppBar, Box, Link as MuiLink, Toolbar, Typography } from "@mui/material"
 
-const sx = {
-    bar: {
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        margin: "10px auto 80px",
-        borderBottom: "1px solid #ddd"
-    },
-    toolBar: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
-        padding: "10px 0",
-    },
-    link: {
-        marginLeft: "12px"
-    },
-    boxLogo: {
-        marginRight: "auto"
-    }
-}
+import { sx } from "./NavBarStyles"
 
 export const NavBar = () => {
     return (
@@ -40,8 +21,8 @@ export const NavBar = () => {
                     <Link href="/about" passHref>
                         <MuiLink sx={sx.link} underline="none" >About</MuiLink>
                     </Link>
-                    <Link href="/list" passHref>
-                        <MuiLink sx={sx.link} underline="none" >My List</MuiLink>
+                    <Link href="/users" passHref>
+                        <MuiLink sx={sx.link} underline="none" >My Users List</MuiLink>
                     </Link>
                 </Box>
             </Toolbar>
