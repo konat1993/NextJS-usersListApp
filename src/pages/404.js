@@ -14,10 +14,12 @@ export const NotFound = () => {
     const router = useRouter()
 
     React.useEffect(() => {
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             router.push("/")
         }, 5000);
-    }, [])
+
+        return () => clearTimeout(timeoutId)
+    }, [router])
     return (
         <Box>
             <Typography variant='h4' gutterBottom>
